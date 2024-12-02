@@ -1,101 +1,123 @@
-import Image from "next/image";
+import Card from "./_components/Card";
+import Cart from "./_components/Cart";
+
+const data = [
+  {
+     "image": {
+          "thumbnail": "/assets/image-waffle-thumbnail.jpg",
+          "mobile": "/assets/image-waffle-mobile.jpg",
+          "tablet": "/assets/image-waffle-tablet.jpg",
+          "desktop": "/assets/image-waffle-desktop.jpg"
+     },
+     "name": "Waffle with Berries",
+     "category": "Waffle",
+     "price": 6.50
+  },
+  {
+      "image": {
+          "thumbnail": "/assets/image-creme-brulee-thumbnail.jpg",
+          "mobile": "/assets/image-creme-brulee-mobile.jpg",
+          "tablet": "/assets/image-creme-brulee-tablet.jpg",
+          "desktop": "/assets/image-creme-brulee-desktop.jpg"
+      },
+      "name": "Vanilla Bean Crème Brûlée",
+      "category": "Crème Brûlée",
+      "price": 10.00
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-macaron-thumbnail.jpg",
+          "mobile": "/assets/image-macaron-mobile.jpg",
+          "tablet": "/assets/image-macaron-tablet.jpg",
+          "desktop": "/assets/image-macaron-desktop.jpg"
+      },
+      "name": "Macaron Mix of Five",
+      "category": "Macaron",
+      "price": 8.50
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-tiramisu-thumbnail.jpg",
+          "mobile": "/assets/image-tiramisu-mobile.jpg",
+          "tablet": "/assets/image-tiramisu-tablet.jpg",
+          "desktop": "/assets/image-tiramisu-desktop.jpg"
+      },
+      "name": "Classic Tiramisu",
+      "category": "Tiramisu",
+      "price": 6.0
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-baklava-thumbnail.jpg",
+          "mobile": "/assets/image-baklava-mobile.jpg",
+          "tablet": "/assets/image-baklava-tablet.jpg",
+          "desktop": "/assets/image-baklava-desktop.jpg"
+      },
+      "name": "Pistachio Baklava",
+      "category": "Baklava",
+      "price": 4.00
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-meringue-thumbnail.jpg",
+          "mobile": "/assets/image-meringue-mobile.jpg",
+          "tablet": "/assets/image-meringue-tablet.jpg",
+          "desktop": "/assets/image-meringue-desktop.jpg"
+      },
+      "name": "Lemon Meringue Pie",
+      "category": "Pie",
+      "price": 5.00
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-cake-thumbnail.jpg",
+          "mobile": "/assets/image-cake-mobile.jpg",
+          "tablet": "/assets/image-cake-tablet.jpg",
+          "desktop": "/assets/image-cake-desktop.jpg"
+      },
+      "name": "Red Velvet Cake",
+      "category": "Cake",
+      "price": 4.50
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-brownie-thumbnail.jpg",
+          "mobile": "/assets/image-brownie-mobile.jpg",
+          "tablet": "/assets/image-brownie-tablet.jpg",
+          "desktop": "/assets/image-brownie-desktop.jpg"
+      },
+      "name": "Salted Caramel Brownie",
+      "category": "Brownie",
+      "price": 4.50
+   },
+   {
+      "image": {
+          "thumbnail": "/assets/image-panna-cotta-thumbnail.jpg",
+          "mobile": "/assets/image-panna-cotta-mobile.jpg",
+          "tablet": "/assets/image-panna-cotta-tablet.jpg",
+          "desktop": "/assets/image-panna-cotta-desktop.jpg"
+      },
+      "name": "Vanilla Panna Cotta",
+      "category": "Panna Cotta",
+      "price": 6.50
+   }
+]
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="p-5">
+   <h1 className="text-3xl sm:text-4xl font-bold my-8 px-5">Product Cards</h1>
+    <div className="flex flex-col xl:flex-row items-center justify-center xl:items-start ">
+    <div className="flex gap-2 flex-col sm:flex-row sm:flex-wrap items-center justify-center ">
+   {data.map((item, index) => (
+      <Card key={index} data={item}/>
+   ))}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
+    <div className="">
+    <Cart/>
+    </div>
+  </div>
+</div>
   );
 }

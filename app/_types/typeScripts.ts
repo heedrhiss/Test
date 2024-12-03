@@ -11,3 +11,10 @@ export type CardProp = {
     price: number
 }
 }
+
+export type TaskProp= {
+    completed: boolean,
+    id: number,
+    title: string,
+    userId: number
+  }

@@ -8,6 +8,7 @@ export default function Navbar() {
       <div className="flex items-center justify-around gap-4 text-xl md:text-3xl space-x-10">
         <Link href="/" className="hover:text-blue-500">Home</Link>
         <Link href="/tasks"  className="hover:text-blue-500">Tasks</Link>
+        <div>Toggle</div>
       </div>
     </nav>
   )

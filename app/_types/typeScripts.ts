@@ -18,3 +18,15 @@ export type TaskProp= {
     title: string,
     userId: number
   }
+
+export type FilterButtonProps = {
+    children: React.ReactNode
+    filter: string
+    active: string
+}
+
+export type ButtonProp = {
+    children: React.ReactNode,
+    onClick?: () => void,
+    type?: string
+}

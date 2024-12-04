@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "./_components/Button";
+
 
 type ErrorProp = {
     error: Error;
@@ -12,7 +14,7 @@ export default function Error({error, reset}: ErrorProp) {
       <main className='flex justify-center items-center flex-col gap-6'>
         <h1 className='text-3xl font-semibold'>Something went wrong!</h1>
         <p className='text-lg'>{error.message}</p>
-        <button onClick={()=> location.reload()} className="border border-black rounded-full hover:scale-90 transition-all font-semibold duration-200 p-3">Reload</button>
+        <Button onClick={()=> location.reload()}>Reload</Button>
       </main>
     );
   }

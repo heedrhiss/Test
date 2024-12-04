@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+- react query
+- react hot toast
+
 First, run the development server:
 
 ```bash

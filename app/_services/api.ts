@@ -11,6 +11,16 @@ const tasks = await fetch("https://jsonplaceholder.typicode.com/todos")
        notFound()
    }
 }
+export async function getTask(id : number): Promise<TaskProp> {
+  const tasks = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    // For Slowing down
+   await new Promise((res) => setTimeout(res, 1000));
+   try{ const data = await tasks.json()
+   return data
+   }catch(error){
+       notFound()
+   }
+}
 
 export async function deleteTask(id : number): Promise<void> {
     try {

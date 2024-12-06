@@ -4,6 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 - react query
 - react hot toast
+- react icons
 
 First, run the development server:
 

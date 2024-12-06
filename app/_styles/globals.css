@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
+/*:root {
+  --background: #171717;
   --foreground: #171717;
-} */
+  
+}
+*/
+@layer base {
+  body {
+    @apply text-stone-800 bg-slate-200; /* Light mode styles */
+  }
+  .dark body {
+    @apply bg-slate-700 text-slate-200; /* Dark mode styles */
+  }
+}
 
 @layer components {
   /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */

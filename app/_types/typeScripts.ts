@@ -30,3 +30,7 @@ export type ButtonProp = {
     onClick?: () => void,
     type?: string
 }
+
+export type DarkModeProviderProps = {
+    children: React.ReactNode;
+  };

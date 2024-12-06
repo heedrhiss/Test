@@ -3,6 +3,7 @@ import "@/app/_styles/globals.css";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import QueryProvider from "./_hooks/QueryProvider";
+import { DarkModeProvider } from "./_hooks/DarkModeContext";
 
 export const metadata: Metadata = {
   title: "IGS Test Project",
@@ -18,13 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`grid grid-rows-[auto_1fr] min-h-screen text-stone-800 bg-slate-200 overflow-x-hidden`}
+        className={`grid grid-rows-[auto_1fr] min-h-screen  overflow-x-hidden`}
       >
+        <DarkModeProvider>
         <QueryProvider>
         <Navbar/>
         {children}
         <Footer/>
         </QueryProvider>
+        </DarkModeProvider>
       </body>
     </html>
   );

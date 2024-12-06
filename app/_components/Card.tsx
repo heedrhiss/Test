@@ -9,7 +9,7 @@ export default function Card({data}:CardProp) {
         <Image src={data.image.tablet} alt={data.name} width={250} height={350} className="rounded-xl hidden sm:block lg:hidden" />
         <Image src={data.image.mobile} alt={data.name} width={250} height={300} className="rounded-xl sm:hidden" />
 
-        <div className="flex items-center justify-center px-7 py-3 bg-white rounded-full font-bold mx-auto hover:cursor-pointer hover:bg-black hover:text-white hover:scale-95 transition-all duration-300 space-x-3 border border-gray-500 -mt-8 mb-5">
+        <div className="flex items-center justify-center px-7 py-3 bg-white dark:bg-slate-400 rounded-full font-bold mx-auto hover:cursor-pointer hover:bg-black hover:text-white hover:scale-95 transition-all duration-300 space-x-3 border border-gray-500 -mt-8 mb-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="21"
@@ -30,7 +30,7 @@ export default function Card({data}:CardProp) {
       <p>Add To Cart</p>
     </div>
       <div className="flex flex-col items-start justify-center">
-        <p className="text-gray-500 text-lg">{data.category}</p>
+        <p className="text-gray-500 text-lg dark:font-bold">{data.category}</p>
         <h2 className="text-xl lg:text-2xl font-bold">{data.name}</h2>
         <p className="text-[#C73B0F] text-lg mb-9">${data.price}</p>
       </div>

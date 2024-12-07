@@ -12,7 +12,7 @@ const tasks = await fetch("https://jsonplaceholder.typicode.com/todos")
        notFound()
    }
 }
-export async function getTask(id : number): Promise<TaskProp> {
+export async function getTask(id : number | string): Promise<TaskProp> {
   const tasks = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
     // For Slowing down
    await new Promise((res) => setTimeout(res, 1000));

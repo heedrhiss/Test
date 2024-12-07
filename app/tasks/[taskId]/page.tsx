@@ -4,7 +4,7 @@ import TaskItem from "../TaskItem";
 
 type PageProps = {
   params: {
-    taskId: number;
+    taskId: number | string;
   };
 };
   

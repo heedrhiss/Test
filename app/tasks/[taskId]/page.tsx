@@ -2,11 +2,11 @@ import { getTask, getTasks } from "@/app/_services/api"
 import { TaskProp } from "@/app/_types/typeScripts"
 import TaskItem from "../TaskItem";
 
-type PageProps = {
-  params: {
-    taskId: number;
-  };
-};
+// type PageProps = {
+//   params: {
+//     taskId: number;
+//   };
+// };
   // export async function generateStaticParams(){
   //   const tasks:TaskProp[] = await getTasks()
   //   return tasks.map((task:TaskProp) => ({
@@ -14,7 +14,7 @@ type PageProps = {
   //   }))
   // }
   
-  export default async function Page({params}:PageProps) {
+  export default async function Page({params}:any) {
     const task:TaskProp = await getTask(params?.taskId)
     
   return (

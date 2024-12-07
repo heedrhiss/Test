@@ -27,7 +27,7 @@ export type FilterButtonProps = {
 
 export type ButtonProp = {
     children: React.ReactNode,
-    onClick?: (e:any) => void | React.FormEvent<HTMLFormElement>;
+    onClick?: (e:React.ChangeEvent<HTMLInputElement>) => void | React.FormEvent<HTMLFormElement>;
     type?: string
 }
 

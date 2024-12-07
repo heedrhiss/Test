@@ -8,7 +8,7 @@ type ErrorProp = {
     reset: () => void;
 }
 
-export default function Error({error, reset}: ErrorProp) {
+export default function Error({error}: ErrorProp) {
   
     return (
       <main className='flex justify-center items-center flex-col gap-6'>

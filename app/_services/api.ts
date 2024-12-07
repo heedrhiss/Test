@@ -8,6 +8,7 @@ const tasks = await fetch("https://jsonplaceholder.typicode.com/todos")
    try{ const data = await tasks.json()
    return data
    }catch(error){
+    console.log(error)
        notFound()
    }
 }
@@ -18,6 +19,7 @@ export async function getTask(id : number): Promise<TaskProp> {
    try{ const data = await tasks.json()
    return data
    }catch(error){
+    console.log(error)
        notFound()
    }
 }

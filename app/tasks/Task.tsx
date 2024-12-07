@@ -2,10 +2,10 @@ import { getTasks } from "../_services/api"
 import { TaskProp } from "../_types/typeScripts"
 import TaskItem from "./TaskItem"
 
-// interface PageProp {
-//   filter: string
-// }
-export default async function Task({filter}:any) {
+interface PageProp {
+  filter: string
+}
+export default async function Task({filter}:PageProp) {
   const tasks = await getTasks()
   // Taking 20 Tasks from the dummy API
  const tasksData:TaskProp[] = tasks.splice(0,20)

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { use, useState } from 'react';
+import { useState } from 'react';
 import { useDarkMode } from '../_hooks/DarkModeContext';
 
 interface SwitchProps {

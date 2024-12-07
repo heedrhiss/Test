@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react";
 import ButtonActions from "../_components/ButtonActions";
 import { TaskProp } from "../_types/typeScripts";
 import Modal from "../_components/Modal";

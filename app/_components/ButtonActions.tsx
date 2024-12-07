@@ -8,8 +8,7 @@ import { FaEye } from "react-icons/fa"
 import { MdDelete, MdOutlineArrowBack } from "react-icons/md"
 import { deleteTask } from "../_services/api"
 import Button from "./Button"
-import Modal from "./Modal"
-import { useState } from "react"
+
 interface ActionProp {
   id: number
   openModal: () => void

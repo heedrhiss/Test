@@ -3,8 +3,8 @@ import { ModalProps } from "../_types/typeScripts";
 
 
 export default function Modal({visible, onClose, children}:ModalProps) {
-function handleOnClose(e:any){
-  if(e.target.id === "container") onClose()
+function handleOnClose(e:React.MouseEvent<HTMLDivElement>){
+  if(e.currentTarget.id === "container") onClose()
 }
 if(!visible) return null;
   return  (

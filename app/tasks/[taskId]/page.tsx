@@ -1,4 +1,4 @@
-import { getTask, getTasks } from "@/app/_services/api"
+import { getTask } from "@/app/_services/api"
 import { TaskProp } from "@/app/_types/typeScripts"
 import TaskItem from "../TaskItem";
 

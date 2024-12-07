@@ -7,6 +7,8 @@ type DarkModeContextType = {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
   showModal: boolean;
+  editModal: boolean;
+  handleEditModal: () => void;
   openModal: () => void;
   handleClose: () => void;
 }
@@ -15,11 +17,16 @@ const DarkModeContext = createContext({} as DarkModeContextType)
 function DarkModeProvider({children}:DarkModeProviderProps){
     const [isDarkMode, setIsDarkMode] = useState(false)
     const [showModal, setShowModal] = useState(false)
+    const [editModal, setEditModal] = useState(false)
     function handleClose(){
       setShowModal(false)
+      setEditModal(false)
     }
     function openModal(){
       setShowModal(true)
+    }
+    function handleEditModal(){
+      setEditModal(true)
     }
     const toggleDarkMode = () => {
       setIsDarkMode((isDarkMode) => !isDarkMode);
@@ -42,7 +49,7 @@ function DarkModeProvider({children}:DarkModeProviderProps){
     }, [isDarkMode])
   return (
     // Returning the Darkmode and Modal values and functions
-  <DarkModeContext.Provider value={{isDarkMode, toggleDarkMode, showModal, openModal, handleClose}}>
+  <DarkModeContext.Provider value={{isDarkMode, toggleDarkMode, showModal, openModal, handleClose, editModal, handleEditModal}}>
     {children}
   </DarkModeContext.Provider>
 )}

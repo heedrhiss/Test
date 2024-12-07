@@ -12,9 +12,10 @@ import Button from "./Button"
 interface ActionProp {
   id: number
   openModal: () => void
+  editModal: () => void
 }
 
-export default function ButtonActions({id, openModal}:ActionProp) {
+export default function ButtonActions({id, openModal, editModal}:ActionProp) {
   
   const router = useRouter()
   const pathname = usePathname()
@@ -38,7 +39,7 @@ export default function ButtonActions({id, openModal}:ActionProp) {
       <Button><FaEye fontSize="1.2rem"  /></Button>
       }
       </Link>
-      <Button onClick={openModal}><CiEdit fontSize="1.2rem" /></Button>
+      <Button onClick={editModal}><CiEdit fontSize="1.2rem" /></Button>
       <Button type="danger" onClick={handleDelete}><MdDelete fontSize="1.2rem" /></Button>
       </div>
       </>

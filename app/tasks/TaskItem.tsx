@@ -11,7 +11,7 @@ interface TaskItemProp {
 }
 
 export default function TaskItem({ data }: TaskItemProp) {
-  const {showModal, openModal, handleClose} = useDarkMode()
+  const {showModal, openModal, editModal, handleEditModal, handleClose} = useDarkMode()
   
   return (
     <>
@@ -19,9 +19,10 @@ export default function TaskItem({ data }: TaskItemProp) {
       <div className="">{data.id}</div>
       <div className="font-semibold">{data.title}</div>
       {/* Button Client Component for Interactions */}
-      <ButtonActions id={data.id} openModal={openModal} />
+      <ButtonActions id={data.id} openModal={openModal} editModal={handleEditModal}/>
     </div>
     <Modal visible={showModal} onClose={handleClose}><Form/></Modal>
+    <Modal visible={editModal} onClose={handleClose}><Form data={data} /></Modal>
     </>
   );
 }

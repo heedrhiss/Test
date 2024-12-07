@@ -1,10 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project hosted with [`Github`](https://github.com/heedrhiss/IGS-test.git).
 
 ## Getting Started
 
 - react query
 - react hot toast
 - react icons
+- react form hook
 
 First, run the development server:
 

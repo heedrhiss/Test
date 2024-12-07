@@ -5,6 +5,7 @@ import ButtonActions from "../_components/ButtonActions";
 import { TaskProp } from "../_types/typeScripts";
 import Modal from "../_components/Modal";
 import { useDarkMode } from "../_hooks/DarkModeContext";
+import Form from "../_components/Form";
 
 interface TaskItemProp {
   data : TaskProp
@@ -21,7 +22,7 @@ export default function TaskItem({ data }: TaskItemProp) {
       {/* Button Client Component for Interactions */}
       <ButtonActions id={data.id} openModal={openModal} />
     </div>
-    <Modal visible={showModal} onClose={handleClose}/>
+    <Modal visible={showModal} onClose={handleClose}><Form/></Modal>
     </>
   );
 }

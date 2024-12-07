@@ -20,7 +20,6 @@ function DarkModeProvider({children}:DarkModeProviderProps){
     }
     function openModal(){
       setShowModal(true)
-      console.log(showModal)
     }
     const toggleDarkMode = () => {
       setIsDarkMode((isDarkMode) => !isDarkMode);
@@ -42,6 +41,7 @@ function DarkModeProvider({children}:DarkModeProviderProps){
       }
     }, [isDarkMode])
   return (
+    // Returning the Darkmode and Modal values and functions
   <DarkModeContext.Provider value={{isDarkMode, toggleDarkMode, showModal, openModal, handleClose}}>
     {children}
   </DarkModeContext.Provider>

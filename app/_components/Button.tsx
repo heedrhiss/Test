@@ -6,10 +6,11 @@ import { ButtonProp } from "../_types/typeScripts";
 
 export default function Button({children, onClick, type}:ButtonProp) {
   const {openModal} = useDarkMode()
+  
     const primary = "bg-blue-500"
     const danger = "bg-red-500"
-    if(type === "secondary") return (
-      <button onClick={openModal} className="border border-black rounded-3xl hover:scale-90 transition-all font-semibold duration-200 px-4 py-3 text-xs md:text-sm">{children}</button>
+    if(type === "modal") return (
+      <button onClick={openModal} className="border border-black rounded-3xl hover:scale-90 transition-all font-semibold duration-200 px-4 py-3 text-xs md:text-sm bg-blue-500">{children}</button>
     )
   return (
     <button onClick={onClick} className={`${type === "primary"? primary : type === "danger" ? danger : ""} border border-black rounded-3xl hover:scale-90 transition-all font-semibold duration-200 px-4 py-3 text-xs md:text-sm`}>

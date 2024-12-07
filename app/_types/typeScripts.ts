@@ -27,10 +27,16 @@ export type FilterButtonProps = {
 
 export type ButtonProp = {
     children: React.ReactNode,
-    onClick?: () => void,
+    onClick?: (e:any) => void | React.FormEvent<HTMLFormElement>;
     type?: string
 }
 
 export type DarkModeProviderProps = {
     children: React.ReactNode;
   };
+
+export interface ModalProps {
+    visible: boolean;
+    onClose: () => void;
+    children?: React.ReactNode
+  }

@@ -20,7 +20,7 @@ export default function Page({searchParams}:Props) {
       <div className="flex flex-col md:flex-row items-center justify-between w-full my-5 space-y-3 md:space-y-0">
       <h1 className="font-bold text-xl lg:text-3xl px-5">Tasks Page</h1>
       <Filter/>
-      <Button type="secondary">Add Task</Button>
+      <Button type="modal">Add Task</Button>
       </div>
       <Suspense fallback={<Spinner/>} key={filter}>
         {/* Task Component is fetching data on the Server side */}

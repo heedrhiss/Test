@@ -15,7 +15,7 @@ interface ActionProp {
   editModal: () => void
 }
 
-export default function ButtonActions({id, openModal, editModal}:ActionProp) {
+export default function ButtonActions({id, editModal}:ActionProp) {
   
   const router = useRouter()
   const pathname = usePathname()

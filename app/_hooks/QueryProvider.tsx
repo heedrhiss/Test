@@ -18,7 +18,7 @@ export default function QueryProvider({
   children: React.ReactNode;
 }) {
   return (
-     <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
       {children}
       <Toaster 
       position="top-center"
@@ -37,6 +37,6 @@ export default function QueryProvider({
         }
       }
       }/>
-    // </QueryClientProvider>
+  </QueryClientProvider>
   );
 }

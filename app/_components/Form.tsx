@@ -1,6 +1,5 @@
 "use client"
 
-import toast from "react-hot-toast";
 import Button from "./Button";
 import { TaskProp } from "../_types/typeScripts";
 import { SubmitHandler, useForm } from "react-hook-form";

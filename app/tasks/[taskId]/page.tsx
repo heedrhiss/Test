@@ -9,7 +9,8 @@ type PageProps = {
 };
   
   export default async function Page({params}:PageProps) {
-    const task:TaskProp = await getTask(params?.taskId)
+    const { taskId } = await params;
+    const task:TaskProp = await getTask(taskId)
     
   return (
     <div className="flex flex-col items-center justify-center space-y-4">

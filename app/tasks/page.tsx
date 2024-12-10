@@ -7,13 +7,14 @@ import Filter from "../_components/Filter";
 import Button from "../_components/Button";
 
 type Props = {
-  searchParams: {
+  searchParams: Promise<{
     stat: string
-  }
+  }>
 }
 
-export default function Page({searchParams}:Props) {  
-  const filter =  searchParams?.stat ?? "all";
+export default async function Page({searchParams}:Props) { 
+  const resolvedParams = await searchParams; 
+  const filter =  resolvedParams?.stat ?? "all";
   
   return (
     <div className="p-5 flex flex-col items-start">

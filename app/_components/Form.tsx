@@ -45,7 +45,7 @@ export default function Form({data}:Props) {
             type="checkbox"
             name="completed"
             id="completed"
-            value={completed}
+            defaultChecked={completed}
             onChange={e=> setCompleted(e.target.checked)}
             className="h-6 w-6 accent-blue-500 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500"
             {...register("completed")}

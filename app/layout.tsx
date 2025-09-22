@@ -6,7 +6,7 @@ import QueryProvider from "./_hooks/QueryProvider";
 import { DarkModeProvider } from "./_hooks/DarkModeContext";
 
 export const metadata: Metadata = {
-  title: "IGS Test Project",
+  title: "Cartolinks Test Project",
   description: "Designed and Created By Heedrhiss",
 };
 

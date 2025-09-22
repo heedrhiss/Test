@@ -17,5 +17,5 @@ export default function Error({error}: ErrorProp) {
         <Button onClick={()=> location.reload()}>Reload</Button>
       </main>
     );
-  }
+}
   

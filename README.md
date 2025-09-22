@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project hosted with [`Github`](https://github.com/heedrhiss/IGS-test.git).
+This is a [Next.js](https://nextjs.org) project hosted with [`Github`](https://github.com/heedrhiss/Test.git).
 
 ## Getting Started
 
